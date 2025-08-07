@@ -1,11 +1,4 @@
-"""
-Name:
-Date Started:
-Brief Project Description:
-GitHub URL:
-"""
 # TODO: Create your main program in this file, using the MoviesApp class
-
 
 """
 Name: Hu Zedong
