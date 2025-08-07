@@ -1,0 +1,113 @@
+# TODO: Create your Kivy layout in the kv language here
+
+
+
+BoxLayout:
+    orientation: 'vertical'
+
+    # Header
+    Label:
+        text: 'Must-See Movies 2.0'
+        size_hint_y: None
+        height: 40
+        font_size: 20
+        bold: True
+
+    # Top section with controls
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: 40
+        spacing: 10
+        padding: 10
+
+        Label:
+            text: 'Sort by:'
+            size_hint_x: None
+            width: 60
+
+        Spinner:
+            id: sort_spinner
+            text: 'Title'
+            values: ['Title', 'Year', 'Category']
+            size_hint_x: None
+            width: 100
+            on_text: app.sort_movies()
+
+        Widget:
+            # Spacer
+
+    # Movie buttons area
+    ScrollView:
+        GridLayout:
+            id: movie_buttons
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+            spacing: 2
+
+    # Add movie section
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_y: None
+        height: 150
+        padding: 10
+
+        Label:
+            text: 'Add New Movie'
+            size_hint_y: None
+            height: 30
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: 30
+
+            Label:
+                text: 'Title:'
+                size_hint_x: None
+                width: 50
+
+            TextInput:
+                id: title_input
+                multiline: False
+
+            Label:
+                text: 'Year:'
+                size_hint_x: None
+                width: 50
+
+            TextInput:
+                id: year_input
+                multiline: False
+                size_hint_x: None
+                width: 100
+
+            Label:
+                text: 'Category:'
+                size_hint_x: None
+                width: 70
+
+            TextInput:
+                id: category_input
+                multiline: False
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: 40
+
+            Button:
+                text: 'Add Movie'
+                on_press: app.add_movie()
+
+            Button:
+                text: 'Clear'
+                on_press: app.clear_fields()
+
+    # Status label
+    Label:
+        id: status_label
+        text: 'Movies to watch: 0. Total movies: 0'
+        size_hint_y: None
+        height: 30
