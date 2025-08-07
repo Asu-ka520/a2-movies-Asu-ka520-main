@@ -4,8 +4,8 @@
 
 """
 Name: Hu Zedong
-Date started: 2025/6/23
-GitHub URL: https://github.com/cp1404-students/a1-movies-Asu-ka520
+Date started: 2025/8/7
+GitHub URL: https://github.com/cp1404-students/a2-movies-Asu-ka520
 Console program for managing movies using Movie and MovieCollection classes
 """
 
