@@ -10,7 +10,7 @@ GitHub URL:
 """
 Name: Hu Zedong
 Date started: 2025/8/7
-GitHub URL: https://github.com/cp1404-students/a2-movies-Asu-ka520
+GitHub URL:https://github.com/Asu-ka520/a2-movies-Asu-ka520-main
 Kivy GUI program for managing movies - Assignment 2
 """
 
